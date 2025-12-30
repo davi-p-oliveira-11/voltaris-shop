@@ -37,7 +37,7 @@ export async function POST(request) {
          where: { username: username.toLowerCase()}   
       })
 
-      if(usernameTaken) {
+      if(isUsernameTaken) {
           return NextResponse.json({ error: "username already taken"}, {status: 400})  
       }
 
